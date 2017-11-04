@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build:dev": "webpack",
-    "build:prod": "webpack -p"
+    "build:prod": "webpack -p --env production"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.6.0",
     "sass-loader": "^6.0.6",
