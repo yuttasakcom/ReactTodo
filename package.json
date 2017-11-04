@@ -8,10 +8,11 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "start": "node server/server.js",
-    "heroku-postbuild": "npm run build:dev"
+    "heroku-postbuild": "npm run build:prod"
   },
   "engines": {
-    "node": "6.11.1"
+    "node": "8.2.1",
+    "npm": "5.3.0"
   },
   "repository": {
     "type": "git",
