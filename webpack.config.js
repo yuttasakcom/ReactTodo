@@ -1,6 +1,8 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const DIR_DIST = 'dist'
 const DIR_SRC = 'src'
 
@@ -46,5 +48,16 @@ module.exports = {
         ignore: ['.*']
       }
     ]),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new CleanWebpackPlugin([DIR_DIST], {
+      _root: __dirname,
+      verbose: true,
+      dry: false
+    })
   ]
 }
