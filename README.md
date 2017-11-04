@@ -1,5 +1,5 @@
 ## React Todo App
-> by YoProgrammer
+> udemy course https://www.udemy.com/react-2nd-edition/
 
 ## Screenshot
 <div align="center">
