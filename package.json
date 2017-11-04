@@ -20,6 +20,7 @@
   "homepage": "https://github.com/yuttasakcom/ReactTodo#readme",
   "dependencies": {
     "css-loader": "^0.28.7",
+    "express": "^4.16.2",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
