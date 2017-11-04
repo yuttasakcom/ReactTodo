@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const DIR_DIST = 'dist'
 const DIR_SRC = 'src'
 
@@ -38,6 +39,13 @@ module.exports = {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: resolve('./src/statics'),
+        to: 'statics',
+        ignore: ['.*']
+      }
+    ]),
   ]
 }
