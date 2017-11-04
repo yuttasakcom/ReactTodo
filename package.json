@@ -10,6 +10,9 @@
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
   },
+  "engines": {
+    "node": "6.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/ReactTodo.git"
